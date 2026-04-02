@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Board - Zoho ToDo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <svg class="logo" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#3b82f6"/><path d="M8 14l4 4 8-8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="app-name">ToDo</span>
+      </div>
+      <button class="new-task-btn" onclick="document.getElementById('createModal').classList.remove('hidden')">New Task</button>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Views</div>
+        <div class="sidebar-item active"><span class="icon">&#128197;</span><span class="label">Agenda view</span></div>
+        <div class="sidebar-item"><span class="icon">&#9734;</span><a href="my-day.html" style="color:inherit;text-decoration:none">My Day</a></div>
+        <div class="sidebar-item"><span class="icon">&#128100;</span><a href="created-by-me.html" style="color:inherit;text-decoration:none">Created by Me</a></div>
+      <div class="sidebar-item"><span class="icon">&#128101;</span><span class="label">Assigned to me</span></div>
+      <div class="sidebar-item"><span class="icon">&#128101;</span><span class="label">Shared with me</span></div>
+      <div class="sidebar-item"><span class="icon">&#128100;</span><span class="label">Personal tasks</span><span class="count">47</span></div>
+        <div class="sidebar-item"><span class="icon">&#127760;</span><span class="label">Unified view</span></div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Groups<div class="section-actions"><button>+</button></div></div>
+        <div class="sidebar-item group-item"><span class="expand-icon">&#9654;</span><span class="label">ZMClient</span><span class="count">24</span></div>
+        <div class="sidebar-item group-item"><span class="expand-icon">&#9654;</span><span class="label">Mail suite-Calendar</span><span class="count">21</span></div>
+        <div class="sidebar-item group-item"><span class="expand-icon">&#9654;</span><span class="label">ZMC Team</span></div>
+      <div class="sidebar-item group-item"><span class="expand-icon">&#9654;</span><span class="label">Task Release</span><span class="count">57</span></div>
+        <div class="show-more">+14 more</div>
+      </div>
+      <div class="sidebar-section">
+      <div class="sidebar-section-title">Tags<div class="section-actions"><button>+</button></div></div>
+        <div class="tag-item"><span class="tag-dot orange"></span>P1 Items</div>
+        <div class="tag-item"><span class="tag-dot orange"></span>General Notes</div>
+        <div class="tag-item"><span class="tag-dot red"></span>IP notes</div>
+      <div class="tag-item"><span class="tag-dot pink"></span>Task Items in progress</div>
+        <div class="tag-item"><span class="tag-dot green"></span>Task Notes</div>
+        <div class="tag-item"><span class="tag-dot blue"></span>Task Enhancement</div>
+      </div>
+    </aside>
+    <div class="main-content">
+      <div class="top-header">
+        <div class="top-header-left"><div class="tab active"><span class="checkmark">&#10004;</span> ToDo</div></div>
+        <div class="top-header-right">
+          <div class="search-box"><span class="search-icon">&#128269;</span><input type="text" placeholder="Search ( / )" onclick="location.href='search.html'"></div>
+          <button class="header-icon-btn" onclick="location.href='notifications.html'">&#128276;</button>
+        <div class="avatar">PK</div>
+          <button class="header-icon-btn">&#9881;</button>
+        </div>
+      </div>
+      <div class="page-header"><div class="page-header-left"><h1 class="page-title">&#128197; Agenda</h1><span class="sort-badge">DUE DATE</span><span class="sort-label">Newest on top</span></div></div>
+    <div class="view-tabs">
+      <div class="view-tab active">&#9636; Board</div>
+      <div class="view-tab" onclick="location.href='agenda-list.html'">&#9776; List</div>
+      <div class="view-actions"><button class="view-action-btn">&#8645; Sort</button><button class="view-action-btn">&#8942;</button></div>
+    </div>
+    <div class="board-container">
+      <div class="board-column"><div class="board-column-header delayed"><span class="board-column-title">Delayed</span><span class="board-column-count">48</span></div><div class="board-cards">
+        <div class="task-card" onclick="location.href='task-detail.html'"><div class="task-card-title">Analysis - &lt;Feature Name&gt;</div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div><span class="assignee-name">Pradeep</span></div></div><div class="task-card-details"><span>&#8644; 5</span><span class="due-date overdue">&#128197; 01 Apr 2026</span></div></div>
+          <div class="task-card"><div class="task-card-header"><span class="priority-icon high">&#10071;</span><span class="task-card-title">Overdue date</span></div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div><span class="assignee-name">Pradeep</span></div></div><div class="task-card-details"><span class="due-date overdue">&#128197; 19 Mar 2026</span></div></div>
+          <div class="task-card"><div class="task-card-title">&#8644; Server</div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div><span class="assignee-name">Pradeep</span></div></div><div class="task-card-details"><span class="due-date overdue">&#128197; 19 Mar 2026</span></div></div>
+        <div class="task-card"><div class="task-card-title">&#8644; HTML</div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div><span class="assignee-name">Pradeep</span></div></div><div class="task-card-details"><span class="due-date overdue">&#128197; 19 Mar 2026</span></div></div>
+          <div class="task-card"><div class="task-card-title">&#8644; Client</div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div><span class="assignee-name">Pradeep</span></div></div><div class="task-card-details"><span class="due-date overdue">&#128197; 27 Feb 2026</span></div></div>
+          <div class="task-card"><div class="task-card-title">&#8644; Design</div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div><span class="assignee-name">Pradeep</span></div></div></div>
+      </div></div>
+      <div class="board-column"><div class="board-column-header today"><span class="board-column-title">Today</span></div><div class="board-cards"><div class="empty-state"><div class="empty-text">No tasks due today</div></div></div></div>
+        <div class="board-column"><div class="board-column-header this-week"><span class="board-column-title">This week</span></div><div class="board-cards"><div class="empty-state"><div class="empty-text">No tasks this week</div></div></div></div>
+      <div class="board-column"><div class="board-column-header this-month"><span class="board-column-title">This month</span><span class="board-column-count">1</span></div><div class="board-cards"><div class="task-card"><div class="task-card-header"><span class="priority-icon high">&#10071;</span><span class="task-card-title">Task</span></div><div class="task-card-footer"><span class="status-badge open">Open</span><div class="task-card-meta"><div class="assignee-avatar">PK</div></div></div><div class="task-card-details"><span class="due-date">&#128197; 15 Apr</span></div></div></div></div>
+      </div>
+    </div>
+    <aside class="right-sidebar">
+      <button class="right-sidebar-btn" onclick="location.href='settings.html'">&#9881;</button>
+      <button class="right-sidebar-btn">&#128172;</button>
+    </aside>
+  </div>
+  <div id="createModal" class="modal-overlay hidden"><div class="modal"><div class="modal-header"><button class="status-dropdown" style="background:#ef4444;color:#fff">Open &#9662;</button><div class="meta-info"><div style="display:flex;align-items:center;gap:6px"><div class="assignee-avatar" style="width:28px;height:28px">PK</div><div><div style="font-size:11px;color:#6b7280">Assigned to</div><div>Pradeep</div></div></div><div><div style="font-size:11px;color:#6b7280">Start Date</div><div>Yet to set</div></div><div><div style="font-size:11px;color:#6b7280">Due Date</div><div>Yet to set</div></div></div><button class="close-btn" onclick="document.getElementById('createModal').classList.add('hidden')">&times;</button></div><div class="modal-body"><input class="modal-title-input" placeholder="Task Title, @mention assignee"><div class="task-meta-row"><span class="meta-label">in</span><span class="meta-value">Personal tasks &#9662;</span><span class="meta-separator">|</span><span class="meta-label">under</span><span class="meta-value">General &#9662;</span><span class="meta-separator">|</span><span class="meta-value">&#10071; Medium &#9662;</span><span class="meta-separator">|</span><span class="reminder-btn">&#128276; Set reminder</span></div><div class="detail-section"><div class="detail-section-title">&#9998; Description</div><textarea class="detail-textarea" placeholder="Description"></textarea></div><div class="detail-section"><div class="detail-section-title">&#128203; Notes <span style="color:red">*</span></div><textarea class="detail-textarea" style="min-height:60px">NA</textarea></div><div class="detail-section"><div class="detail-section-title">&#8644; Subtasks</div><div class="subtask-add"><span class="plus-icon">+</span> Subtask Title, @mention assignee<div style="margin-left:auto"><div class="assignee-avatar">PK</div></div></div></div></div><div class="modal-footer"><button class="btn-primary">Save</button><button class="btn-secondary" onclick="document.getElementById('createModal').classList.add('hidden')">Cancel</button></div></div></div>
+  </body>
+  </html>
